@@ -1,0 +1,12 @@
+{
+  "name": "gulp_browsersync",
+  "version": "3.8.2",
+  "description": "Gulp Browsersync",
+  "main": "index.html",
+  "author": "Ivan Milincic",
+  "devDependencies": {
+    "gulp-cli":"*",
+    "gulp":"*",
+    "browser-sync": "*"
+  }
+}
