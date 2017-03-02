@@ -1,40 +1,45 @@
-var gulp        = require('gulp');
+var gulp = require('gulp');
+var notify = require('gulp-notify');
+// RELOAD modules
 var browserSync = require('browser-sync').create();
 var reload      = browserSync.reload;
-// less
-less = require('gulp-less'),
-cssmin = require('gulp-cssmin'),
-plumber = require('gulp-plumber'),
-rename = require('gulp-rename');
+// LESS related modules
+var less = require('gulp-less');
+var autoprefix = require('gulp-autoprefixer');
+var cssmin = require('gulp-cssmin');
+var rename = require('gulp-rename');
 
-// Relaod
-gulp.task('reload', function () {
 
-    browserSync.init({
-        server: {
-            baseDir: "./"
-        }
-    });
-
-    gulp.watch("*.html").on("change", reload);
-    gulp.watch("./less/*.less").on("change", reload);
-});
-
-// Less
-gulp.task('watch', function () {
-    gulp.watch('./less/*.less', ['less']);
-});
+// Compile LESS, autoprefix CSS3, minify...
+// and save to target CSS directory
 gulp.task('less', function () {
-    gulp.src('./less/*.less')
-        .pipe(plumber())
+    return gulp.src('./less/theme.less')
         .pipe(less())
-        .pipe(gulp.dest('./css/'))
+        .pipe(autoprefix('last 2 version'))
+        .pipe(gulp.dest('./css'))
         .pipe(cssmin())
         .pipe(rename({
             suffix: '.min'
         }))
         .pipe(gulp.dest('./css'))
-
+        .pipe(notify('LESS Compiled'))
+});
+// Keep an eye on less files for changes...
+gulp.task('watch', function () {
+    gulp.watch('./less/custom/*.less', ['less']);
+    gulp.watch('./less/*.less', ['less']);
 });
 
+// Relaod
+gulp.task('reload', function () {
+    browserSync.init({
+        server: {
+            baseDir: "./"
+        }
+    });
+    gulp.watch("*.html").on("change", reload);
+    gulp.watch("./css/*.css").on("change", reload);
+});
+
+// What tasks does running gulp trigger?
 gulp.task('default', ['less', 'watch', 'reload']);
