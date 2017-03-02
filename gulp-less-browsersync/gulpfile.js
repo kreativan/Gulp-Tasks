@@ -17,12 +17,12 @@ gulp.task('reload', function () {
     });
 
     gulp.watch("*.html").on("change", reload);
-    gulp.watch("./less/*.less").on("change", reload);
+    gulp.watch("./less/**/*.less").on("change", reload);
 });
 
 // Less
 gulp.task('watch', function () {
-    gulp.watch('./less/*.less', ['less']);
+    gulp.watch('./less/**/*.less', ['less']);
 });
 gulp.task('less', function () {
     gulp.src('./less/*.less')
