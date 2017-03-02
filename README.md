@@ -1,4 +1,4 @@
-# Gulp + Browsersync
+# Gulp + Browsersync + Less
 Reload browser after file save with gulp + browsersync. Resurce https://www.browsersync.io/docs/gulp
 
 ###  Install node.js, gulp, browsersync
