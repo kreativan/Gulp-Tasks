@@ -35,7 +35,8 @@ gulp.task('watch', function () {
 gulp.task('connect-sync', function() {
   connect.server({}, function (){
         browserSync.init({
-            proxy: '127.0.0.1:8000'
+            proxy: '127.0.0.1:8000',
+            browser: "firefox"
         });
         gulp.watch("*.php").on("change", reload);
         gulp.watch("./js/*.js").on("change", reload);
