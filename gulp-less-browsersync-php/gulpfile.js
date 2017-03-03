@@ -29,6 +29,10 @@ gulp.task('less', function () {
 gulp.task('watch', function () {
     gulp.watch('./less/custom/*.less', ['less']);
     gulp.watch('./less/*.less', ['less']);
+    // reload page whe dose fiels change
+    gulp.watch("*.php").on("change", reload);
+    gulp.watch("./js/*.js").on("change", reload);
+    gulp.watch("./css/*.css").on("change", reload);
 });
 
 // Connect to Localhost & Browsersync
@@ -38,10 +42,8 @@ gulp.task('connect-sync', function() {
             proxy: '127.0.0.1:8000',
             browser: "firefox"
         });
-        gulp.watch("*.php").on("change", reload);
-        gulp.watch("./js/*.js").on("change", reload);
-        gulp.watch("./css/*.css").on("change", reload);
     });
+    gulp.src("./index.php").pipe(notify("Gulp Started!"));
 });
 
 // What tasks does running gulp trigger?

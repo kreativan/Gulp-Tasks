@@ -24,21 +24,23 @@ gulp.task('less', function () {
         .pipe(gulp.dest('./css'))
         .pipe(notify('LESS Compiled'))
 });
-// Keep an eye on less files for changes...
+
+// Watch task. Keep an eye on less files for changes...
 gulp.task('watch', function () {
     gulp.watch('./less/custom/*.less', ['less']);
     gulp.watch('./less/*.less', ['less']);
+	// reload page after dose file changes
+	gulp.watch("*.html").on("change", reload);
+    gulp.watch("./css/*.css").on("change", reload);
 });
 
-// Relaod
+// Browsersync
 gulp.task('reload', function () {
     browserSync.init({
         server: {
             baseDir: "./"
         }
     });
-    gulp.watch("*.html").on("change", reload);
-    gulp.watch("./css/*.css").on("change", reload);
 });
 
 // What tasks does running gulp trigger?
