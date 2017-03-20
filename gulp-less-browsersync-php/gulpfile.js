@@ -49,7 +49,6 @@ gulp.task('watch', function () {
     gulp.watch("./inc/*.php").on("change", reload);
     gulp.watch("./js/*.js").on("change", reload);
     gulp.watch("./css/*.css").on("change", reload);
-    gulp.watch("./less/_custom/*.less").on("change", reload);
 });
 
 // Connect to Localhost & Browsersync
