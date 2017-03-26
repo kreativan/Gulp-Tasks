@@ -42,13 +42,15 @@ gulp.task('less', function () {
 });
 // Keep an eye on less files for changes...
 gulp.task('watch', function () {
-    gulp.watch('./less/_custom/*.less', ['less']);
+    gulp.watch('./less/custom/*.less', ['less']);
+    gulp.watch('./less/vars.less', ['less']);
     gulp.watch('./less/theme.less', ['less']);
     // reload page whe dose fiels change
     gulp.watch("*.php").on("change", reload);
     gulp.watch("./inc/*.php").on("change", reload);
     gulp.watch("./js/*.js").on("change", reload);
     gulp.watch("./css/*.css").on("change", reload);
+    //gulp.watch("./less/_custom/*.less").on("change", reload);
 });
 
 // Connect to Localhost & Browsersync
