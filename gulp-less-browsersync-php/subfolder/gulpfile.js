@@ -27,31 +27,31 @@ gulp.task('less', function () {
       this.emit('end')
     };
 
-    return gulp.src('./less/theme.less')
+    return gulp.src('folder_to_watch/less/theme.less')
         .pipe(plumber({errorHandler: onError}))
         .pipe(less())
         .pipe(autoprefix('last 2 version'))
         .pipe(notify("Succesfully compiled <%= file.relative %>!"))
-        .pipe(gulp.dest('./css'))
+        .pipe(gulp.dest('folder_to_watch/css'))
         .pipe(cssmin())
         .pipe(rename({
             suffix: '.min'
         }))
-        .pipe(gulp.dest('./css'))
+        .pipe(gulp.dest('folder_to_watch/css'))
         //.pipe(notify('LESS Compiled'))
 
 });
 // Keep an eye on less files for changes...
 gulp.task('watch', function () {
     // Main Files to watch
-    gulp.watch("fodler_to_watch/*.html").on("change", reload);
-    gulp.watch("fodler_to_watch/*.php").on("change", reload);
+    gulp.watch("folder_to_watch/*.html").on("change", reload);
+    gulp.watch("folder_to_watch/*.php").on("change", reload);
     // less/css/js to watch
-    gulp.watch('fodler_to_watch/less/custom/*.less', ['less']);
-    gulp.watch('fodler_to_watch/less/vars.less', ['less']);
-    gulp.watch('fodler_to_watch/less/theme.less', ['less']);
-    gulp.watch('fodler_to_watch/less/responsive.less', ['less']);
-    gulp.watch("fodler_to_watch/css/*.css").on("change", reload);
+    gulp.watch('folder_to_watch/less/custom/*.less', ['less']);
+    gulp.watch('folder_to_watch/less/vars.less', ['less']);
+    gulp.watch('folder_to_watch/less/theme.less', ['less']);
+    gulp.watch('folder_to_watch/less/responsive.less', ['less']);
+    gulp.watch("folder_to_watch/css/*.css").on("change", reload);
 });
 
 // Connect to Localhost & Browsersync
