@@ -13,6 +13,7 @@
     "gulp-less": "*",
     "gulp-autoprefixer": "*",
     "gulp-cssmin": "*",
-    "gulp-rename": "*"
+    "gulp-rename": "*",
+    "gulp-plumber": "*"
   }
 }
