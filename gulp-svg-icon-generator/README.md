@@ -2,7 +2,7 @@
 * Install node.js
 * Run `npm install`
 * Copy all your svg icons to "icons" folder
-* Use `gulp svg-icon-generator` command to generata icon set (icons.svg will be generated in root folder by default)
+* Use `gulp svg-icon-generator` command to generate svg icon set (icons.svg will be generated in root folder by default)
 
 ### How to insert svg
 ```
