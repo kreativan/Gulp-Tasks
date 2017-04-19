@@ -1,0 +1,14 @@
+{
+  "name": "gulp_svg",
+  "version": "3.8.2",
+  "description": "Gulp SVG",
+  "main": "index.html",
+  "author": "Ivan Milincic",
+  "devDependencies": {
+    "gulp-cli":"*",
+    "gulp":"*",
+    "gulp-svgstore":"*",
+    "gulp-svgmin":"*",
+    "gulp-rename":"*"
+  }
+}
