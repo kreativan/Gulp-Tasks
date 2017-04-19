@@ -8,12 +8,12 @@
 ```
 <svg class="svg-icon" xmlns=http://www.w3.org/2000/svg role="img" >
 	<title>calendar</title>
-	<use xlink:href="images/icons.svg#icon_name"></use>
+	<use xlink:href="icons_folder_path/icons.svg#icon_name"></use>
 </svg>
 ```
 or just
 ```
 <svg class="svg-icon" xmlns=http://www.w3.org/2000/svg role="img" >
-	<use xlink:href="images/icons.svg#icon_name"></use>
+	<use xlink:href="icons_folder_path/icons.svg#icon_name"></use>
 </svg>
 ```
