@@ -1,4 +1,4 @@
-### Gulp SVG Icon Generator
+## Gulp SVG Icon Generator
 * Install node.js
 * Run `npm install`
 * Copy all your svg icons to "icons" folder
