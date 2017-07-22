@@ -1,2 +1,2 @@
 # Gulp Tasks
-Require node.js and npm ofc. All dependencies are in package.json just run `npm install`. Use `gulp` command to run gulp.
+Just run npm install.
