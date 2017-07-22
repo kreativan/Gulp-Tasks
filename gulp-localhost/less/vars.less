@@ -1,0 +1,138 @@
+/* ==================================================================
+    Variables Overrides
+================================================================== */
+
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500');
+
+// fonts
+@tm-font:                               'Quicksand', sans-serif;
+@tm-base-font:                          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+// navbar
+@tm-navbar-font-weight:                 500;
+@navbar-nav-item-font-family:           @tm-font;
+
+// Colors
+@tm-primary-bg:                         #3498db;
+@tm-secondary-bg:                       #44d29f;
+@tm-dark-bg:                            #435160;
+
+// header
+@tm-header-bg:                          @global-muted-background;
+@tm-header-height:                      80px;
+@tm-logo-max-height:                    30%;
+@tm-mobile-header-height:               70px;
+
+// footer
+@tm-footer-bg:                          #37414a;
+@tm-footer-color:                       #999;
+@tm-copyright-bg:                       #323c44;
+@tm-copyright-color:                    #999;
+
+// backgrounds
+@background-default-background:                 @global-background;
+@background-muted-background:                   @global-muted-background;
+@background-primary-background:                 @tm-primary-bg;
+@background-secondary-background:               @tm-secondary-bg;
+
+/*  Layout
+================================================================== */
+@container-max-width:                   1200px;
+@container-small-max-width:             900px;
+@container-large-max-width:             1600px;
+
+@container-padding-horizontal:          15px;
+@container-padding-horizontal-s:        @global-gutter;
+@container-padding-horizontal-m:        @global-medium-gutter;
+
+// Widths
+@width-small-width:                             150px;
+@width-medium-width:                            350px;
+@width-large-width:                             450px;
+@width-xlarge-width:                            600px;
+@width-xxlarge-width:                           750px;
+
+/*  Break Points
+================================================================== */
+@breakpoint-small:                             640px;  // Phone landscape
+@breakpoint-medium:                            960px;  // Tablet Landscape
+@breakpoint-large:                             1200px; // Desktop
+@breakpoint-xlarge:                            1600px; // Large Screens
+
+@breakpoint-xsmall-max:                        (@breakpoint-small - 1);
+@breakpoint-small-max:                         (@breakpoint-medium - 1);
+@breakpoint-medium-max:                        (@breakpoint-large - 1);
+@breakpoint-large-max:                         (@breakpoint-xlarge - 1);
+
+/*  Typography
+================================================================== */
+@global-font-family:                            @tm-base-font;
+@global-font-size:                              16px;
+@global-line-height:                            1.7;      // 24px
+
+@global-xxlarge-font-size:                      2.625rem; // 42px
+@global-xlarge-font-size:                       2rem;     // 32px
+@global-large-font-size:                        1.3rem;   // 24px
+@global-medium-font-size:                       1.2rem;  // 20px
+@global-small-font-size:                        0.875rem; // 14px
+
+/*  Colors
+================================================================== */
+@global-color:                                  #666;
+@global-emphasis-color:                         #333;
+@global-muted-color:                            #999;
+
+@global-link-color:                             @tm-primary-bg;
+@global-link-hover-color:                       darken(@tm-primary-bg, 5%);
+
+@global-inverse-color:                          #fff;
+
+/*  Backgrounds
+================================================================== */
+@global-background:                             #fff;
+
+@global-muted-background:                       #f8f8f8;
+@global-primary-background:                     @tm-primary-bg;
+@global-secondary-background:                   #222;
+
+@global-success-background:                     #32d296;
+@global-warning-background:                     #faa05a;
+@global-danger-background:                      #f0506e;
+
+/*  Border
+================================================================== */
+@global-border-width:                           1px;
+@global-border:                                 #e5e5e5;
+
+/*  Box Shadows
+================================================================== */
+@global-small-box-shadow:                       0 2px 8px rgba(0,0,0,0.08);
+@global-medium-box-shadow:                      0 5px 15px rgba(0,0,0,0.08);
+@global-large-box-shadow:                       0 14px 25px rgba(0,0,0,0.16);
+@global-xlarge-box-shadow:                      0 28px 50px rgba(0,0,0,0.16);
+
+/*  Spacings
+================================================================== */
+// Used in margin, section, list
+@global-margin:                                 25px;
+@global-small-margin:                           10px;
+@global-medium-margin:                          50px;
+@global-large-margin:                           70px;
+@global-xlarge-margin:                          140px;
+
+// Used in grid, column, container, align, card, padding
+@global-gutter:                                 25px;
+@global-small-gutter:                           15px;
+@global-medium-gutter:                          35px;
+@global-large-gutter:                           70px;
+
+/*  Controls
+================================================================== */
+// used for forms, buttons...
+@global-control-height:                         40px;
+@global-control-small-height:                   30px;
+@global-control-large-height:                   55px;
+
+/*  z-index
+================================================================== */
+@global-z-index:                                1000;

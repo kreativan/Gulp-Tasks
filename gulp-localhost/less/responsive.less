@@ -1,0 +1,59 @@
+/* ==================================================================
+    Responsive Fixes
+================================================================== */
+
+.mobile-menu-button {
+    display:inline-block;
+    height:@tm-header-height;
+    line-height:@tm-header-height;
+    width:80px;
+    text-align: center;
+    color:@global-color;
+    //background: @tm-primary-bg;
+    stroke:@global-color;
+    border-right:1px solid @global-border;
+}
+
+@media (max-width: 960px) {
+
+    #header {
+        background:#fff;
+        border-bottom:1px solid @global-border;
+    }
+
+    #header .uk-container {
+        padding:0;
+    }
+
+    .logo {
+        padding-left:20px;
+        height:@tm-mobile-header-height;
+        line-height:@tm-mobile-header-height;
+    }
+
+    .mobile-menu-button {
+        height:@tm-mobile-header-height;
+        line-height:@tm-mobile-header-height;
+    }
+
+}
+
+
+/* Phone landscape and smaller
+========================================================  */
+@media (max-width: 767px) {
+
+
+    .uk-align-right {
+        float:none !important;
+        display:block;
+        margin-left:0;
+    }
+
+    .next-prev-article .uk-button {
+        float:none;
+        display:block;
+        margin-bottom:10px;
+    }
+
+}
