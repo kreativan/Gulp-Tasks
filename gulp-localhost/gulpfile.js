@@ -59,7 +59,7 @@ gulp.task('connect-sync', function() {
   connect.server({}, function (){
         browserSync.init({
             proxy: '127.0.0.1:8000', // localhost root
-            baseDir: "./_Baumrock/graphic-design/", // define base dir here
+            baseDir: "./PROJECT_FOLDER/", // define base dir here
             browser: "firefox"
         });
     });
